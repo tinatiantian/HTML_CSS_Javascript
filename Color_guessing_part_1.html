@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<body onload="do_game()">
+  <script>
+    var colors=["aqua","black","blue","brown","fuchsia","gray","green",
+    "lavender","pink","red"];    var targetIndex;
+    var guess;
+    function do_game() {
+      targetIndex=Math.floor(Math.random()*colors.length);
+      alert("The current target is: "+colors[targetIndex]);
+      var finished=false;
+      while(!finished){
+        guess=prompt("I am thinking one of these colors:\n\n "+colors.join()+
+        "\n\nWhat color am I thinking of?");
+        if(guess==colors[targetIndex]) finished=true;
+      }
+    }
+
+  </script>
+</body>
+</html>
